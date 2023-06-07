@@ -1,0 +1,277 @@
+$primary-color: #FF7A00;
+$hover-primary: #984900;
+$secondary-color: #18151C;
+$black-color: #000;
+$white-color: #fff;
+$fade-color: #8A2020;
+
+.mat-drawer-backdrop.mat-drawer-shown {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+
+.mat-drawer-container{
+  background-color: #fff;
+}
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 70%;
+  background-color: #18151C;
+  box-shadow: 3px 0 10px rgba($color: #000000, $alpha: .5);
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+  color: black;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+
+.mobile-menu{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em 0 0 1em;
+  transform: translateX(-15px);
+
+  .sign-in{
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    color: $white-color;
+    padding: 0 15px;
+    border-radius: 4px;
+    font-size: 1em;
+    height: 40px;
+    cursor: pointer;
+    transition: background .3s;
+
+    &:hover{
+      background-color: $primary-color;
+    }
+  }
+
+  .sign-up{
+    background-color: $primary-color;
+    color: $white-color;
+    padding: 0 15px;
+    height: 40px;        
+    font-size: 1em;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background .3s;
+    transform: translateY(-10px);
+
+    &:hover{
+      background-color: $hover-primary;
+    }
+  }
+
+  .space{
+    margin: 1.3em 0;
+  }
+
+  a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+  }
+
+}
+
+
+.tool-bar{
+  justify-content: space-between;
+  max-width: 1250px;
+  margin: 0 auto;
+  box-shadow: 0 0 0 100vmax $secondary-color;
+  clip-path: inset(0 -100vmax);
+
+  .logo{
+    width: 200px;
+    color: #000;
+    cursor: pointer;
+  }
+}
+
+.hidden{
+  display: none;
+}
+
+.mat-icon{
+  color: #fff;
+}
+
+.mat-toolbar {
+  background-color: #18151C;
+  // border-bottom: 6px solid $primary-color;
+  padding: 2em;
+  a{
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.logo-mobile{
+  img{
+    margin: 0;
+    width: 150px;
+    transform: translateX(-15px);
+  }
+}
+
+
+
+.links-desk{
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    li{
+      list-style: none;
+      margin-right: 2em;
+
+      &:nth-of-type(2){
+        margin-right: 0;
+      }
+
+      .sign-in{
+        background-color: transparent;
+        border: 2px solid $primary-color;
+        color: $white-color;
+        padding: 0 15px;
+        border-radius: 4px;
+        font-size: 1em;
+        height: 40px;
+        cursor: pointer;
+        transition: background .3s;
+
+        &:hover{
+          background-color: $primary-color;
+        }
+      }
+
+      .sign-up{
+        background-color: $primary-color;
+        color: $white-color;
+        padding: 0 15px;
+        height: 40px;        
+        font-size: 1em;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        transition: background .3s;
+
+        &:hover{
+          background-color: $hover-primary;
+        }
+      }
+    }
+  }
+
+
+  a{
+    font-weight: 300;
+    font-size: 16px;
+
+    li{
+      list-style: none;
+    }
+  }
+
+}
+
+.actions{
+  display: none;
+  .create{
+    a{  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 1.1em;
+      height: 20px;
+      p{
+        color: white;
+        font-size: 16px;
+        font-weight: 300;
+      }
+      img{
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+      }
+    }
+
+  }
+
+  .router-notifications{
+    height: 26px;
+    .noti{
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+
+  .actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .links-desk{
+    display: flex;
+    a{
+      color: white;
+    }
+  }
+}
+
+@media only screen and (min-width: 670px) {
+
+  #menu{
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width: 790px) {
+
+  .menu-ham{
+    display: none;
+  }
+
+  .actions{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  
+  .actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .links-desk{
+    display: flex;
+  }
+}
