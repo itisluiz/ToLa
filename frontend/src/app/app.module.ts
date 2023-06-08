@@ -15,6 +15,7 @@ import { HomeNavComponent } from './components/home-nav/home-nav.component';
 import { HomeCardComponent } from './components/home-card/home-card.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { FooterComponent } from './components/footer/footer.component';
+import { MainNavComponent } from './components/main-nav/main-nav.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FooterComponent } from './components/footer/footer.component';
     HomePageComponent,
     HomeNavComponent,
     HomeCardComponent,
-    FooterComponent
+    FooterComponent,
+    MainNavComponent
   ],
   imports: [
     BrowserModule,

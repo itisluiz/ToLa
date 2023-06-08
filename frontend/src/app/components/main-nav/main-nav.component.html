@@ -1,0 +1,50 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport="false"
+        position="end"
+        [ngClass]="{hidden: !(isHandset$ | async)}"
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'" 
+        [opened]="(isHandset$ | async) === false">
+      <mat-toolbar></mat-toolbar>
+      <mat-nav-list class="mobile-menu">
+        <a class="space" routerLink="#">Home</a>
+        <a class="space" routerLink="#">Sobre</a>
+        <a class="space" routerLink="#">Eventos</a>
+        <button class="sign-in space">Entrar</button>
+        <button class="sign-up space">Cadastrar</button>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="relative">
+        <div class="logo"><img src="../../../assets/white-logo.svg" alt="logo"></div>
+      <mat-toolbar class="tool-bar">
+        <div class="bar-detail"></div>
+        <button class="menu-ham"
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon id="menu" aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+  
+        <div class="links-desk">
+          <ul>
+            <a href=""><li>Eventos</li></a>
+            <a href=""><li>Meus ingressos</li></a>
+            <i class='bx bx-search'></i>
+          </ul>
+
+          <div class="user">
+            <ul>
+                <i class='bx bx-bell'></i>
+                <div class="user-pic"><div class="circle"></div> <img class="user-mock" src="../../../assets/user-mock.svg"></div>
+            </ul>
+          </div>
+        </div>
+
+
+      
+      </mat-toolbar>
+      <ng-content></ng-content>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
