@@ -115,7 +115,7 @@ $fade-color: #8A2020;
 .mat-toolbar {
   background-color: #18151C;
   // border-bottom: 6px solid $primary-color;
-  padding: 2em;
+  padding: 3em 1.5em;;
   a{
     text-decoration: none;
     cursor: pointer;
@@ -156,8 +156,9 @@ $fade-color: #8A2020;
         color: $white-color;
         padding: 0 15px;
         border-radius: 4px;
-        font-size: 1em;
+        font-size: .85em;
         height: 40px;
+        margin-right: -10px;
         cursor: pointer;
         transition: background .3s;
 
@@ -171,7 +172,7 @@ $fade-color: #8A2020;
         color: $white-color;
         padding: 0 15px;
         height: 40px;        
-        font-size: 1em;
+        font-size: .85em;
         border-radius: 4px;
         border: none;
         cursor: pointer;

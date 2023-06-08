@@ -42,6 +42,8 @@ $fade-color: #8A2020;
                 color: $white-color;
                 font-size: 48px;
                 line-height: 60px;
+                font-family: Inter;
+                font-weight: 700;
             }
             
             p{
@@ -50,6 +52,7 @@ $fade-color: #8A2020;
                 line-height: 22px;
                 margin-top: 2em;
                 margin-bottom: 3em;
+                font-family: Inter;
             }
 
             .pseudo-button{
@@ -67,8 +70,9 @@ $fade-color: #8A2020;
                     top: 0;
                     left: 0;
                     content: 'JUNTAR-SE';
+                    cursor: pointer;
                     font-weight: 500;
-                    font-size: 1.1em;
+                    font-size: 1.2em;
                     color: #fff;
                     margin-left: 50px;
                     transform: translateY(20px);
@@ -94,10 +98,15 @@ $fade-color: #8A2020;
             h2{
                 font-size: 30px;
                 margin-bottom: 1em;
+                font-family: Inter;
+                font-weight: 700;
+                line-height: 38px;
             }
 
             p{
                 margin-bottom: 1em;
+                font-family: Inter;
+                line-height: 20px;
             }
 
         }
@@ -134,10 +143,15 @@ $fade-color: #8A2020;
             h2{
                 font-size: 30px;
                 margin-bottom: 1em;
+                font-family: Inter;
+                font-weight: 700;
+                line-height: 38px;
             }
 
             p{
                 margin-bottom: 1em;
+                font-family: Inter;
+                line-height: 20px;
             }
 
             .pseudo-button-about{
@@ -157,7 +171,7 @@ $fade-color: #8A2020;
                     left: 0;
                     content: 'CHECAR EVENTOS';
                     font-weight: 500;
-                    font-size: 1.1em;
+                    font-size: 1.3em;
                     color: #fff;
                     margin-left: 50px;
                     transform: translateY(20px);
@@ -172,22 +186,30 @@ $fade-color: #8A2020;
     .wrapper{
         padding: 0;
 
+
         .typo-clients{
             padding: 1em;
             .sub-title{
                 text-transform: uppercase;
                 color: #FF7A00;
                 letter-spacing: 0.17em;
+                font-size: 1.3em;
+                transform: translateY(10px);
             }
 
             h2{
                 font-size: 30px;
                 margin-bottom: 1em;
                 margin-top: -5px;
+                font-family: Inter;
+                font-weight: 700;
+                line-height: 38px;
             }
 
             p{
                 margin-bottom: 1em;
+                font-family: Inter;
+                line-height: 20px;
             }
 
             .page-counter{
@@ -208,17 +230,34 @@ $fade-color: #8A2020;
         h2{
             font-size: 30px;
             margin-bottom: 1em;
+            font-family: Inter;
+            font-weight: 700;
+            line-height: 38px;
         }
 
         .questions{
             margin-left: -1.5em;
             .item{
+                box-shadow: none;
+
+                #shadow{
+                    box-shadow: none;
+                    padding: 1em 0;
+
+                    #resp{
+                        max-width: 65%;
+                    }
+
+                }
+
                 .header{
-                    font-size: 24px;
-                    margin: 1em 0;
+                    font-size: 22px;
+                    padding: 1em 0;
+
                 }
                 hr{
                     margin-left: 1.5em;
+                    opacity: 60%;
                 }
             }
 
@@ -228,7 +267,7 @@ $fade-color: #8A2020;
 
 .buy-ticket-section{
     position: relative;
-    padding: 2em 0;
+    padding: 4em 0;
 
     .background-buy-ticket{
         position: absolute;
@@ -243,12 +282,18 @@ $fade-color: #8A2020;
         color: $white-color;
         h1{
             text-align: center;
-            font-size: 30px;
+            font-size: 34px;
+            font-family: Inter;
             margin-bottom: .7em;
+            line-height: 38px;
+            font-weight: 700;
         }
         p{
             text-align: center;
             margin-bottom: 1em;
+            font-family: Inter;
+            line-height: 28px;
+            font-size: 18px;
         }
 
         .learn-more{
@@ -272,6 +317,9 @@ $fade-color: #8A2020;
                 margin-bottom: 0;
                 margin: 0 7px;
                 font-weight: 500;
+                font-family: Inter;
+                line-height: 30px;
+                font-size: 1em;
             }
 
             .circle{
@@ -568,6 +616,7 @@ $fade-color: #8A2020;
             .main-typo{
                 h1{
                     font-size: 76px;
+                    
                 }
 
                 p{
@@ -595,6 +644,49 @@ $fade-color: #8A2020;
             }
         }
     }
+
+    .data-section{
+        .wrapper{
+            .data-typo{
+                h2{
+                    line-height: 45px;
+                }
+
+                p{
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+
+    .about-section{
+        .wrapper{
+            .typo-about{
+                h2{
+                    line-height: 45px;
+                }
+
+                p{
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+
+    .clients-section{
+        .wrapper{
+            .typo-clients{
+                h2{
+                    line-height: 45px;
+                }
+
+                p{
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+
 }
 
 @media only screen and (min-width: 1200px){
@@ -603,7 +695,7 @@ $fade-color: #8A2020;
     }
 
     .hero-section{
-        min-height: calc(100svh - 122px);
+        min-height: calc(100svh - 119px);
         padding: 0;
         position: relative;
         .wrapper{
@@ -646,5 +738,13 @@ $fade-color: #8A2020;
         .wrapper{
             width: 50%;
         }
+    }
+}
+
+@keyframes TelaSlideIn{
+    from{
+        transform: translateY(100px);
+    }to{
+        transform: translateY(0px);
     }
 }

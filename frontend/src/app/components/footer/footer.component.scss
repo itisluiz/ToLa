@@ -31,6 +31,7 @@ $fade-color: #8A2020;
 
                 p{
                     width: 90%;
+                    line-height: 2em;
                     font-size: clamp(10px, 2vw, 20px);
                 }
             }
@@ -48,7 +49,7 @@ $fade-color: #8A2020;
                         a{
                             text-decoration: none;
                             color: $white-color;
-                            font-size: clamp(10px, 2vw, 20px);
+                            font-size: clamp(10px, 2vw, 18px);
                             transition: .5s;
 
                             &:hover{
