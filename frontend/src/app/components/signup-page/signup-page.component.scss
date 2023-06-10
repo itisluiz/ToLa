@@ -1,0 +1,240 @@
+.main-container
+{
+    display: flex;
+}
+
+.wrapper
+{
+    max-width: 1200px;
+}
+
+.column
+{
+    flex: 1;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    /*padding-top: 120px !important;
+    display: grid;
+    align-items: center;*/
+}
+
+.column:last-child
+{
+    background-color: var(--secondary-color);
+    border-left: 15px solid var(--primary-color);
+}
+
+.content-container
+{
+    max-width: 650px;
+}
+
+/* -=-=-=-=-=-=-=-=-=-= Primeira Coluna -=-=-=-=-=-=-=-=-=-= */
+
+.column.first-column 
+{
+    padding: 0 0 0 120px;
+}
+
+.column.first-column
+{
+    h2 
+    {
+        font-size: 30px !important;
+        color: var(--primary-color);
+        font-weight: 400 !important;
+        font-family: inter !important;
+    }
+
+    .line 
+    {
+        height: 3px;
+        width: 120px;
+        background: var(--primary-color);
+        position: relative;
+        bottom: 5px;
+    }
+
+    .text
+    {
+        font-size: 18px;
+        margin: 25px 0 50px 0;
+    }
+
+    .input-content p 
+    {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .input-content 
+    {
+        margin: 22px 0px;
+    }
+
+    .input-box
+    {
+        position: relative;
+        right: 24px;
+        display: flex;
+        align-items: center;
+    }
+
+    input
+    {
+        width: 90%;
+        height: 45px;
+        border: none;
+        background: var(--light-gray-color);
+        border-radius: 4px;
+        padding-left: 50px;
+        font-size: 16px;
+        outline: none !important;
+        transition: 0.5s ease;
+    }
+
+    input:focus
+    {
+        border: 2px solid var(--primary-color);
+    }
+
+    i
+    {
+        position: relative; 
+        left: 35px; 
+        font-size: 24px; 
+        color: #C1C1C1;
+    }
+
+    button 
+    {
+        cursor: pointer;
+        background-image: linear-gradient(94.11deg, #8A2020 -130.02%, #BD4712 -63.99%, #FF7A00 113.79%);
+        height: 45px;
+        width: 96%;
+        border: none;
+        font-size: 16px;
+        color: white;
+        border-radius: 4px;
+        margin-top: 22px;
+        transition: background-image 0.3s;
+    }
+
+    .have-account 
+    {
+        margin-top: 22px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .have-account p, .have-account span
+    {
+        font-size: 15px;
+    }
+
+    .have-account span
+    {
+        cursor: pointer;
+        margin-left: 8px;
+        color: var(--primary-color);
+    }
+}
+
+
+/* -=-=-=-=-=-=-=-=-=-= Segunda Coluna -=-=-=-=-=-=-=-=-=-= */
+
+.column.second-column
+{
+    padding: 0 120px 0 0 !important;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.column.second-column
+{
+    .content-container
+    {
+        float: right;
+    }
+
+    .logo
+    {
+        display: flex;
+        justify-content: center;
+    }
+
+    .text-container
+    {
+        float: right;
+        margin-top: 5em;
+
+        .reserved-rights
+        {
+            text-align: center;
+            margin-top: 120px;
+        }
+    }
+
+    .text-container .align-end
+    {
+        text-align: end;
+    }
+
+    .text-container h1
+    {
+        font-size: 76px;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .align-end
+    {
+        p
+        {
+            font-size: 16px;
+            margin-top: 50px;
+        }
+
+        img
+        {
+            margin-top: 35px;
+        }
+    }
+    
+    .align-left 
+    {
+        margin-top: 90px;
+
+        h3
+        {
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        .card-container 
+        {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card-box
+        {
+            max-width: 190px;
+            margin-top: 40px;
+
+            .title
+            {
+                text-transform: uppercase;
+                color: var(--primary-color);
+                margin-bottom: 10px;
+            }
+
+            .text
+            {
+                font-weight: 200;
+            }
+        }
+    }
+}

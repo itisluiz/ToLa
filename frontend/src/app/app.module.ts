@@ -16,6 +16,9 @@ import { HomeCardComponent } from './components/home-card/home-card.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainNavComponent } from './components/main-nav/main-nav.component';
+import { EventsHomeComponent } from './components/events-home/events-home.component';
+import { SignupPageComponent } from './components/signup-page/signup-page.component';
+import { SigninPageComponent } from './components/signin-page/signin-page.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { MainNavComponent } from './components/main-nav/main-nav.component';
     HomeNavComponent,
     HomeCardComponent,
     FooterComponent,
-    MainNavComponent
+    MainNavComponent,
+    EventsHomeComponent,
+    SignupPageComponent,
+    SigninPageComponent
   ],
   imports: [
     BrowserModule,

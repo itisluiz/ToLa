@@ -1,0 +1,260 @@
+.wrapper
+{
+    padding: 1em;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+}
+
+.location i.bx.bx-map {
+  margin-right: 5px;
+  color: var(--gray-color);
+}
+
+.location p {
+  color: var(--gray-color);
+  margin-bottom: 0px;
+}
+
+.location .change-location button {
+  background-color: var(--primary-color);
+  border-radius: 24px;
+  border: none;
+  padding: 2px 15px;
+  color: white;
+  margin-left: 15px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 25px;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* -=-=-=-=-=-=-=-=-=-= Tipos dos eventos -=-=-=-=-=-=-=-=-=-= */
+
+.event-container {
+  display: flex;
+  margin-top: 25px;
+  overflow-x: auto;
+}
+
+.event-container::-webkit-scrollbar {
+  display: none;
+}
+
+.event-container .event-type {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.event-container .event-type .event {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  margin: 0px 8px;
+  transition: 0.5s ease-in-out;
+}
+
+.event-container .event-type .event:hover {
+  background-color: var(--primary-color);
+}
+
+.event-container .event-type .event i {
+  font-size: 25px;
+  color: var(--primary-color);
+  transition: 0.5s ease-in-out;
+}
+
+.event-container .event-type .event i:hover {
+  color: white;
+}
+
+.event-container .event-type .label {
+  margin-top: 6px;
+}
+
+/* -=-=-=-=-=-=-=-=-=-= Sugestão de eventos -=-=-=-=-=-=-=-=-=-= */
+
+.title.sugestion {
+  margin-top: 25px;
+}
+
+.sugestion-container .image img {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+}
+
+.sugestion-container .title {
+  margin: 20px 0px;
+  font-weight: 600;
+}
+
+.sugestion-container .subtitle.desc {
+  margin: 20px 0px;
+  font-weight: 600;
+}
+
+.sugestion-container hr {
+  margin: auto;
+}
+
+.sugestion-container .location {
+  margin-top: 10px;
+}
+
+.sugestion-container .event-local {
+  color: var(--primary-color);
+  margin-left: 5px;
+}
+
+img.ticket-button 
+{
+    margin-top: 10px;
+    position: relative;
+    right: 15px;
+}
+
+img.ticket-button::after
+{
+    
+}
+
+/* -=-=-=-=-=-=-=-=-=-= Eventos em Alta -=-=-=-=-=-=-=-=-=-= */
+
+.second-section {
+  margin-top: 50px;
+}
+
+.top-events .title-box {
+  display: flex;
+}
+
+.top-events .title {
+  margin-top: 0px;
+}
+
+.top-events p {
+  margin-bottom: 0px;
+  color: var(--primary-color);
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.events-container {
+  display: flex;
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.events-container .event-card:first-child {
+  margin-left: 0px;
+}
+
+.events-container::-webkit-scrollbar {
+  display: none;
+}
+
+.event-card {
+  margin: 0px 10px;
+}
+
+.event-card .date {
+  text-transform: uppercase;
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 15px;
+}
+
+.event-card .event-name {
+  text-align: center;
+  font-weight: 600;
+}
+
+.event-card .local {
+  text-align: center;
+}
+
+/* -=-=-=-=-=-=-=-=-=-= Achamos que você vai gostar -=-=-=-=-=-=-=-=-=-= */
+
+.third-section .subtitle:not(:first-child) {
+  margin-top: 25px;
+}
+
+.third-section {
+  margin-top: 50px;
+}
+
+.suggestion-box {
+  margin-top: 25px;
+}
+
+.suggestion-card-container {
+  display: flex;
+  overflow-x: auto;
+}
+
+.suggestion-card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.suggestion-card-container .event-card:first-child {
+  margin-left: 0px;
+}
+
+/* -=-=-=-=-=-=-=-=-=-= RESPONSIVIDADE -=-=-=-=-=-=-=-=-=-= */
+
+@media (min-width: 650px) {
+  .wrapper {
+    padding: 2em;
+  }
+
+  .sugestion-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .sugestion-container .image {
+    margin-right: 30px;
+  }
+
+  .title {
+    font-size: 20px !important;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 800px) {
+  /*
+    .suggestion-box
+    {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    .suggestion-card-container
+    {
+        display: block;
+    }*/
+}
