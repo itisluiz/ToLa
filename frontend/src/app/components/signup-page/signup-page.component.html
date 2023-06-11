@@ -1,5 +1,18 @@
 <div class="main-container">
 
+    <div class="popup center">
+        <div class="overlay">
+            <div class="content">
+                <div class="title">Confirme seu endereço de E-mail</div>
+                <div class="description">Toque no botão abaixo para confirmar seu endereço de e-mail. Se você não criou uma conta com o Tolá,
+                pode excluir este e-mail com segurança.</div>
+                <button>Confirmar E-mail</button>
+
+                <p>Obrigado, equipe Tolá</p>
+            </div>
+        </div>
+    </div>
+
     <div class="column first-column">
 
         <div class="content-container">
@@ -17,7 +30,7 @@
                     <p>Nome</p>
                     <div class="input-box">
                         <i class='bx bxs-user'></i>
-                        <input type="text">
+                        <input type="text" required>
                     </div>
                 </div>
 
@@ -25,7 +38,7 @@
                     <p>Email</p>
                     <div class="input-box">
                         <i class='bx bxs-envelope'></i>
-                        <input type="text">
+                        <input type="text" required>
                     </div>
                 </div>
 
@@ -33,7 +46,7 @@
                     <p>Senha</p>
                     <div class="input-box">
                         <i class='bx bxs-lock-alt' ></i>
-                        <input type="password">
+                        <input type="password" required>
                     </div>
                 </div>
 
@@ -41,11 +54,11 @@
                     <p>Confirmar Senha</p>
                     <div class="input-box">
                         <i class='bx bxs-lock-alt' ></i>
-                        <input type="password">
+                        <input type="password" required>
                     </div>
                 </div>
 
-                <button>Criar Conta</button>
+                <button id="create-account-btn">Criar Conta</button>
 
             </form>
 
