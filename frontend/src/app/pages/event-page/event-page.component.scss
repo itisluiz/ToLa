@@ -28,17 +28,7 @@ p{
         position: relative;
         width: 100%;
 
-        h1{
-            position: absolute;
-            margin: 0 .35em;
-            bottom: 0;
-            z-index: 3;
-            color: #fff;
-            font-size: clamp(30px, 3vw, 40px);
-            padding-bottom: .5em;
-            font-weight: 500;
-            max-width: 1200px;
-        }
+
 
         .banner{
             width: 100%;
@@ -52,6 +42,18 @@ p{
     .wrapper{
         margin: 0 1em;
         max-width: 1200px;
+        position: relative;
+
+        h1{
+            z-index: 999;
+            position: absolute;
+            transform: translateY(-70px);
+            top: 0;
+            color: #fff;
+            font-size: clamp(30px, 3vw, 40px);
+            padding-bottom: .5em;
+            font-weight: 500;
+        }
 
         .event-info{
             display: flex;
@@ -223,7 +225,7 @@ p{
     .wrapper{
         margin: 1em;
         max-width: 1200px;
-        width: 97%;
+        width: 92%;
         h2{
             font-size: clamp(24px, 3vw, 32px);
             width: 100%;
@@ -251,4 +253,57 @@ p{
         }
     }
 
+}
+
+@media only screen and (min-width: 600px) {
+    .classification-section{
+        margin-top: 6em;
+        .wrapper{
+            width: 97%;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .banner-section{
+        .wrapper{
+            .event-about{
+
+                .desc{
+                    width: 68%;
+                }
+
+                .options{
+                    display: flex;
+                    flex-direction: row;
+
+                    .grey-ticket-container{
+                        transform: translateX(-40px);
+                    }
+                }
+            }
+        }
+    }
+
+    .more-info-section{
+        .wrapper{
+            .typo-info{
+                h2{
+                    margin-bottom: 1em;
+                    margin-top: 1em;
+                }
+
+            }
+
+            .artist-container{
+                margin-top: 4em;
+            }
+        }
+    }
+
+    .classification-section{
+        margin-top: 6em;
+        margin-bottom: 4em;
+
+    }
 }

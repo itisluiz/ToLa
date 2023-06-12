@@ -5,6 +5,10 @@ $black-color: #000;
 $white-color: #fff;
 $fade-color: #8A2020;
 
+ng-content{
+  width: 100%;
+}
+
 .mat-drawer-backdrop.mat-drawer-shown {
   background-color: rgba(0, 0, 0, 0.1);
 }
@@ -121,7 +125,6 @@ $fade-color: #8A2020;
     .bar-detail{
         background-color: $primary-color;
         height: 6px;
-        width: 100%;
         position: absolute;
         box-shadow: 0 0 0 100vmax $primary-color;
         clip-path: inset(0 -100vmax);
