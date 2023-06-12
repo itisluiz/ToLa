@@ -1,0 +1,254 @@
+$primary-color: #FF7A00;
+$hover-primary: #984900;
+$secondary-color: #18151C;
+$black-color: #000;
+$white-color: #fff;
+$fade-color: #8A2020;
+
+app-main-nav{
+    z-index: -1;
+}
+
+h1{
+    line-height: 110%;
+}
+
+p{
+    line-height: 110%;
+}
+
+.banner-section{
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .event-name{
+        position: relative;
+        width: 100%;
+
+        h1{
+            position: absolute;
+            margin: 0 .35em;
+            bottom: 0;
+            z-index: 3;
+            color: #fff;
+            font-size: clamp(30px, 3vw, 40px);
+            padding-bottom: .5em;
+            font-weight: 500;
+            max-width: 1200px;
+        }
+
+        .banner{
+            width: 100%;
+            object-fit: cover;
+            height: 30vh;
+            min-height: 120px;
+            max-height: 300px;
+        }
+    }
+
+    .wrapper{
+        margin: 0 1em;
+        max-width: 1200px;
+
+        .event-info{
+            display: flex;
+            align-items: center;
+            margin-top: 1em;
+
+            .location{
+                display: flex;
+                align-items: center;
+                margin-right: 2em;
+
+                p{
+                    padding-left: .5em;
+                    margin: 0;
+                    line-height: normal;
+                }
+            }
+
+            .time{
+                display: flex;
+                align-items: center;
+
+                p{
+                    padding-left: .5em;
+                    margin: 0;
+                    line-height: normal;
+                }
+            }
+        }
+
+        .event-about{
+            margin-top: 4em;
+            h2{
+                font-size: clamp(24px, 3vw, 32px);
+            }
+
+            p{
+                font-size: clamp(16px, 2vw, 18px);
+                line-height: 150%;
+                color: #747474;
+
+                span{
+                    color: $primary-color;
+                    font-weight: 500;
+                }
+            }
+
+            .desc{
+                font-size: clamp(16px, 2vw, 18px);
+                color: #000;
+                margin-bottom: 3em;
+
+            }
+
+            .options{
+                margin-left: -1.3em;
+
+                .buy-ticket-container{
+                    position: relative;
+                    transform: translateX(-7px);
+
+                    img{
+                        transform: scaleX(0.95);
+                    }
+
+                    &::after{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        content: 'COMPRAR INGRESSO';
+                        font-weight: 500;
+                        font-size: 1.2em;
+                        color: #fff;
+                        margin-left: 48px;
+                        transform: translateY(20px);
+                    }
+                }
+
+                .grey-ticket-container{
+                    position: relative;
+                    transform: translateX(-18px);
+
+                    img{
+                        transform: scaleX(0.85);
+                    }
+
+                    &::after{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        content: 'AVALIAR EVENTO';
+                        font-weight: 500;
+                        font-size: 1.2em;
+                        color: #fff;
+                        margin-left: 60px;
+                        transform: translateY(20px);
+                    }
+                }
+            }
+
+   
+        }
+    }
+    
+}
+
+.more-info-section{
+    margin-top: 6em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .wrapper{
+        margin: 1em;
+        max-width: 1200px;
+
+        .typo-info{
+            h2{
+                font-size: clamp(24px, 3vw, 32px);
+            }
+
+            .sales-until{
+                color: #989898;
+                font-weight: 300;
+            }
+
+            hr{
+                opacity: 40%;
+                margin-bottom: 1em;
+            }
+
+            p{
+                font-size: clamp(16px, 2vw, 18px);
+                line-height: 150%;
+            }
+        }
+
+        .artist-container{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
+
+        .observation{
+            strong{
+                font-size: clamp(16px, 2vw, 18px);
+                line-height: 150%;
+            }
+
+            p{
+                font-size: clamp(16px, 2vw, 18px);
+                line-height: 150%;
+
+                &:nth-of-type(1){
+                    margin-top: 2em;
+                }
+            }
+        }
+    }
+}
+
+.classification-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4em;
+    .wrapper{
+        margin: 1em;
+        max-width: 1200px;
+        width: 97%;
+        h2{
+            font-size: clamp(24px, 3vw, 32px);
+            width: 100%;
+        }
+
+        p{
+            font-size: clamp(16px, 2vw, 18px);
+            line-height: 150%;
+        }
+
+        hr{
+            opacity: 40%;
+            margin-bottom: 1em;
+        }
+
+        .class-scale{
+            font-size: clamp(28px, 2vw, 48px);
+            color: #7C7C7C;
+            margin: 1em 0;
+            #nota{
+                font-size: clamp(50px, 2vw, 64px);
+                color: #000;
+                font-weight: 500;
+            }
+        }
+    }
+
+}
