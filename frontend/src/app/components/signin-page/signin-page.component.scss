@@ -27,7 +27,8 @@
 
 .column.first-column 
 {
-    padding: 0 0 0 120px;
+    display: flex;
+    justify-content: center;
     color: white;
 
     .logo
@@ -93,7 +94,6 @@
 
 .column.second-column
 {
-    padding: 0 120px 0 0 !important;
     display: flex;
     justify-content: center;
 
@@ -224,7 +224,7 @@
 
         .line-black 
         {
-            width: 490px;
+            width: 70%;
             height: 1px;
             background: black;
             margin-left: 10px;
@@ -260,6 +260,123 @@
             margin: 0 0 0 10px;
             font-size: 15px;
             font-weight: 500;
+        }
+    }
+
+}
+
+/* -=-=-=-=-=-=-=-=-=-= Responsividade -=-=-=-=-=-=-=-=-=-= */
+
+@media (max-width: 1415px) 
+{
+    .content-container
+    {
+        padding: 3em;
+    }
+
+    .column.first-column h1 
+    {
+        font-size: 70px;
+    }
+
+}
+
+@media (max-width: 1340px)
+{
+    .social-media-container
+    {
+        justify-content: space-evenly !important;
+
+        .social-box
+        {
+            width: auto !important;
+            padding: 0 20px;
+
+            p
+            {
+                display: none !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px)
+{
+    .line-black
+    {
+        width: 60% !important;
+    }
+}
+
+@media (max-width: 900px)
+{
+    .column.first-column h1 
+    {
+        font-size: 60px;
+    }
+
+    .line-black
+    {
+        width: 50% !important;
+    }
+}
+
+@media (max-width: 850px)
+{
+    .main-container 
+    {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .column.first-column .logo 
+    {
+        bottom: 50px;
+    }
+}
+
+@media (max-width: 450px)
+{
+    .column.second-column 
+    {
+        .remember-me
+        {
+            p
+            {
+                font-size: 13px;
+            }
+        }
+
+        .forgot-password
+        {
+            p
+            {
+                font-size: 13px;
+            }
+        }
+
+    }
+
+}
+
+@media (max-width: 400px)
+{
+    .column.first-column h1 
+    {
+        font-size: 50px;
+    }
+
+    .column.second-column
+    {
+        h2
+        {
+            font-size: 25px !important;
+        }
+
+        .help-box
+        {
+            flex-direction: column;
+            margin-right: 0px !important;
         }
     }
 

@@ -19,6 +19,7 @@ import { MainNavComponent } from './components/main-nav/main-nav.component';
 import { EventsHomeComponent } from './components/events-home/events-home.component';
 import { SignupPageComponent } from './components/signup-page/signup-page.component';
 import { SigninPageComponent } from './components/signin-page/signin-page.component';
+import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { SigninPageComponent } from './components/signin-page/signin-page.compon
     MainNavComponent,
     EventsHomeComponent,
     SignupPageComponent,
-    SigninPageComponent
+    SigninPageComponent,
+    EditProfileComponent
   ],
   imports: [
     BrowserModule,
