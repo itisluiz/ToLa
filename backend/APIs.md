@@ -56,6 +56,40 @@ PARA PESSOA JURÍDICA:
 {"verbose": "Login efetuado"}
 ```
 
+### **POST**: /api/auth/status
+#### Não espera nada
+#### Responde JSON (HTTP 200)
+```json
+{"verbose": "Não logado"}
 
+PARA PESSOA FÍSICA:
+{
+    "pessoafisica": true,
+    "verbose": "Logado como pessoa física",
+    "userinfo": {
+        "id_credencial": 1,
+        "nome": "Fulano",
+        "sobrenome": "Ciclano",
+        "cpf": "00000000000",
+        "nascimento": "1990-12-30",
+        "genero": 0
+    }
+}
+
+PARA PESSOA JURÍDICA:
+{
+    "verbose": "Logado como pessoa jurídica",
+    "userinfo": {
+        "id_credencial": 2,
+        "titulo": "Empresa de Tal",
+        "cnpj": "00000000000000"
+    }
+}
+```
+
+### **GET**: /api/auth/logout
+#### Não espera nada
+#### Não responde nada (HTTP 200)
+Desloga (remove cookie de sessão) e redireciona para raiz
 
 

@@ -3,7 +3,7 @@ import dbconnection from "./../../helpers/database";
 import mariadb from "mariadb";
 import { sendmail } from "./../../helpers/email";
 import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
+import jwt, { JwtPayload } from "jsonwebtoken";
 
 const router = express.Router();
 
@@ -117,7 +117,7 @@ router.post("/login", (req, res, next) => {
                     else
                     {
                         var token = jwt.sign({id: query_email_res.id}, process.env.DB_PASS as string);
-                        res.status(200).cookie('token', token).json({"verbose": `Login efetuado`}).send();
+                        res.cookie("token", token).json({"verbose": `Login efetuado`}).send();
                     }
 
                 }
@@ -131,6 +131,47 @@ router.post("/login", (req, res, next) => {
         conn.release();
 
     });
+});
+
+router.post("/status", (req, res, next) => {
+    const form = req.body;
+
+    let decodedToken : JwtPayload;
+    try {
+        decodedToken = jwt.verify(req.cookies["token"], process.env.DB_PASS as string) as JwtPayload;
+    }
+    catch (err) {
+        res.json({"verbose": `Não logado`});
+        return;
+    }
+
+    dbconnection().then(async (conn) =>
+    {
+        try {
+            let query_userinfo = await conn.execute("SELECT * from pessoafisica WHERE id_credencial = ?",
+                decodedToken.id);
+
+            if (query_userinfo.length == 0)
+                query_userinfo = await conn.execute("SELECT * from pessoajuridica WHERE id_credencial = ?",
+                decodedToken.id);
+            
+            let query_userinfo_res = query_userinfo[0];
+            let pessoafisica = query_userinfo_res.cpf && true;
+
+            res.json({pessoafisica: pessoafisica, verbose: `Logado como pessoa ${pessoafisica? "física" : "jurídica"}`, userinfo: query_userinfo_res});
+        }
+        catch (err) {
+           console.log(err);
+           res.sendStatus(500);
+        }
+
+        conn.release();
+    });
+
+});
+
+router.get("/logout", (req, res, next) => {
+    res.status(200).clearCookie("token").redirect("/");
 });
 
 export default router;
