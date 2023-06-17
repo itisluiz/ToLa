@@ -1,0 +1,299 @@
+.wrapper
+{
+    margin-top: 50px !important;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .title
+    {
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    .main-info
+    {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+
+        .info-box 
+        {
+            margin-left: 50px;
+            
+            .name 
+            {
+                font-size: 24px;
+                font-weight: 500;
+            }
+
+            .email 
+            {
+                margin-top: 10px;
+                font-size: 18px;
+                color: var(--primary-color);
+                font-weight: 400;
+            }
+
+            .btn-box 
+            {
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-between;
+
+                button 
+                {
+                    cursor: pointer;
+                    background-image: linear-gradient(94.11deg, #8A2020 -130.02%, #BD4712 -63.99%, #FF7A00 113.79%);
+                    height: 40px;
+                    width: 46%;
+                    border: none;
+                    font-size: 16px;
+                    color: white;
+                    border-radius: 4px;
+                    margin-top: 15px;
+                    transition: background-image 0.3s;
+                }
+
+                button#del-avatar
+                {
+                    background-image: none;
+                    background-color: var(--dark-gray);
+                }
+            }
+        }
+    }
+
+    .tab-container 
+    {
+        margin-top: 6em;
+
+        .tickets-container 
+        {
+            padding: 3em 1em;
+
+            .event-container
+            {
+                .line 
+                {
+                    position: relative;
+                    top: 2em;
+                    width: 100%;
+                    height: 1px;
+                    background: #cfcfcf;
+                }
+            }
+
+            .event-container:not(:first-child)
+            {
+                margin: 4em 0em;
+            }
+            
+            .event-box 
+            {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .event-info 
+                {
+                    display: flex;
+                    align-items: center;
+    
+                    img
+                    {
+                        width: 220px;
+                        height: 120px;
+                        object-fit: cover;
+                    }
+    
+                    .infos 
+                    {
+                        margin-left: 1.5em;
+                        max-width: 300px;
+    
+                        .date 
+                        {
+                            text-transform: uppercase;
+                            color: var(--primary-color);
+                            font-weight: 600;
+                        }
+    
+                        .name 
+                        {
+                            font-weight: 600;
+                            font-size: 16px;
+                            margin: 12px 0;
+                        }
+                    }
+                }
+
+                .view-ticket-box
+                {
+                    button
+                    {
+                        cursor: pointer;
+                        background-image: linear-gradient(94.11deg, #8A2020 -130.02%, #BD4712 -63.99%, #FF7A00 113.79%);
+                        height: 45px;
+                        width: 14em;
+                        border: none;
+                        font-size: 16px;
+                        color: white;
+                        border-radius: 4px;
+                        margin-top: 15px;
+                        transition: background-image 0.3s;
+                    }
+                }
+
+            }
+        }
+
+        .historic-container
+        {
+            padding: 3em 1em;
+
+            .title
+            {
+                display: flex;
+                align-items: center;
+
+                h1 
+                {
+                    font-size: 24px !important;
+                    font-weight: 500 !important;
+                    margin: 0 !important;
+                }
+
+                .count 
+                {
+                    font-size: 16px;
+                    color: var(--primary-color);
+                    font-weight: 700;
+                    margin-left: 5px;
+                }
+            }
+        
+            .input-content 
+            {
+                margin: 22px 0px;
+
+                p
+                {
+                    font-size: 16px;
+                    margin-bottom: 8px;
+                }
+
+                .input-box
+                {
+                    position: relative;
+                    right: 24px;
+                    display: flex;
+                    align-items: center;
+
+                    input[type=text], input[type=password]
+                    {
+                        width: 40%;
+                        height: 45px;
+                        border: none;
+                        background: var(--light-gray-color);
+                        border-radius: 4px;
+                        padding-left: 50px;
+                        font-size: 16px;
+                        outline: none !important;
+                        transition: 0.5s ease;
+                    }
+                
+                    input[type=text]:focus, input[type=password]:focus
+                    {
+                        border: 2px solid var(--primary-color);
+                    }
+
+                    input::placeholder 
+                    {
+                        color: #ababab;
+                        font-size: 16px;
+                    }
+                
+                    i
+                    {
+                        position: relative; 
+                        left: 35px; 
+                        font-size: 24px; 
+                        color: #C1C1C1;
+                    }
+                }
+            }
+
+            .mat-elevation-z8 
+            {
+                box-shadow: none !important;
+                margin-bottom: 2em;
+            }
+        
+        }
+    }
+}
+
+@media (max-width: 1300px)
+{
+    .wrapper
+    {
+        max-width: none;
+        padding: 4em;
+    }
+
+}
+
+@media (max-width: 670px)
+{
+    .wrapper
+    {
+        .main-info
+        {
+            .info-box
+            {
+                .name
+                {
+                    font-size: 20px;
+                }
+
+                .email
+                {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 610px)
+{
+
+    .main-info
+    {
+        img 
+        {
+            width: 140px;
+        }
+    }
+
+}
+
+@media (max-width: 500px) 
+{
+    .wrapper  
+    {
+        .main-info
+        {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .info-box
+        {
+            margin-left: 0px !important;
+            margin-top: 30px;
+        }
+
+    }   
+}

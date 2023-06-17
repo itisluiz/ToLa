@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatTableModule } from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +23,7 @@ import { EventsHomeComponent } from './components/events-home/events-home.compon
 import { SignupPageComponent } from './components/signup-page/signup-page.component';
 import { SigninPageComponent } from './components/signin-page/signin-page.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
+import { MyInfosComponent } from './components/my-infos/my-infos.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,8 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
     EventsHomeComponent,
     SignupPageComponent,
     SigninPageComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    MyInfosComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +49,10 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatTabsModule,
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

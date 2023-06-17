@@ -1,0 +1,126 @@
+<div class="wrapper">
+
+    <h1 class="title">Editando Perfil</h1>
+
+    <div class="main-info">
+        <img src="../../../assets/Mask group.svg" alt="">
+        <div class="info-box">
+            <div class="name">Gustavo Guimarães Martins</div>
+            <div class="email">gustavo.guimaraes@gmail.com</div>
+            <div class="btn-box">
+                <button id="edit-profile">Editar Perfil</button>
+                <button id="del-avatar">Deletar Avatar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-container">
+
+        <mat-tab-group>
+
+            <mat-tab label="Meus Ingressos">
+
+                <div class="tickets-container">
+                    <div class="event-container">
+                        <div class="event-box">
+                            <div class="event-info">
+                                <img src="../../../assets/evento-show.png" alt="">
+                                <div class="infos">
+                                    <div class="date">12 de abril 13h</div>
+                                    <div class="name">Henrique & Juliano - Show de sertanejo</div>
+                                    <div class="location">Piazza arado - Curitiba</div>
+                                </div>
+                            </div>
+                            <div class="view-ticket-box">
+                                <button id="view-ticket">Visualizar Ingresso</button>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+
+                    <div class="event-container">
+                        <div class="event-box">
+                            <div class="event-info">
+                                <img src="../../../assets/evento-show.png" alt="">
+                                <div class="infos">
+                                    <div class="date">12 de abril 13h</div>
+                                    <div class="name">Henrique & Juliano - Show de sertanejo</div>
+                                    <div class="location">Piazza arado - Curitiba</div>
+                                </div>
+                            </div>
+                            <div class="view-ticket-box">
+                                <button id="view-ticket">Visualizar Ingresso</button>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+
+                </div>
+            </mat-tab>
+
+            <mat-tab label="Histórico de Eventos">
+
+                <div class="historic-container">
+
+                    <div class="title">
+                        <h1>Lista de Eventos</h1>
+                        <div class="count">(2)</div>
+                    </div>
+
+                    <div class="input-content">
+                        <div class="input-box">
+                            <i class='bx bx-search-alt-2'></i>
+                            <input type="text" placeholder="Pesquise seu evento aqui">
+                        </div>
+                    </div>
+
+                    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                        <!--- Note that these columns can be defined in any order.
+                              The actual rendered columns are set as a property on the row definition" -->
+                      
+                        <!-- Position Column -->
+                        <ng-container matColumnDef="Evento">
+                          <th mat-header-cell *matHeaderCellDef> Evento </th>
+                          <td mat-cell *matCellDef="let element"> {{element.Evento}} </td>
+                        </ng-container>
+                      
+                        <!-- Name Column -->
+                        <ng-container matColumnDef="Data">
+                          <th mat-header-cell *matHeaderCellDef> Data </th>
+                          <td mat-cell *matCellDef="let element"> {{element.Data}} </td>
+                        </ng-container>
+                      
+                        <!-- Weight Column -->
+                        <ng-container matColumnDef="Quantidade">
+                          <th mat-header-cell *matHeaderCellDef> Quantidade </th>
+                          <td mat-cell *matCellDef="let element"> {{element.Quantidade}} </td>
+                        </ng-container>
+                      
+                        <!-- Symbol Column -->
+                        <ng-container matColumnDef="Valor">
+                          <th mat-header-cell *matHeaderCellDef> Valor </th>
+                          <td mat-cell *matCellDef="let element"> {{element.Valor}} </td>
+                        </ng-container>
+                      
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                    
+                    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                    showFirstLastButtons
+                    #paginator
+                    aria-label="Select page of periodic elements">
+                    </mat-paginator>
+                      
+                </div>
+
+            </mat-tab>
+
+        </mat-tab-group>          
+
+    </div>
+
+</div>
+
+<app-footer></app-footer>
