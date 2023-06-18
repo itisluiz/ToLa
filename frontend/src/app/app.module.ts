@@ -19,6 +19,13 @@ import { MainNavComponent } from './components/main-nav/main-nav.component';
 import { EventPageComponent } from './pages/event-page/event-page.component';
 import { ArtistComponent } from './components/artist/artist.component';
 import { CardUserFeedbackComponent } from './components/card-user-feedback/card-user-feedback.component';
+import { PaymentPageComponent } from './pages/payment-page/payment-page.component';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
+import { PaymentTabsComponent } from './components/payment-tabs/payment-tabs.component';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +37,9 @@ import { CardUserFeedbackComponent } from './components/card-user-feedback/card-
     MainNavComponent,
     EventPageComponent,
     ArtistComponent,
-    CardUserFeedbackComponent
+    CardUserFeedbackComponent,
+    PaymentPageComponent,
+    PaymentTabsComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +51,11 @@ import { CardUserFeedbackComponent } from './components/card-user-feedback/card-
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatStepperModule,
+    MatInputModule,
+    MatFormFieldModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

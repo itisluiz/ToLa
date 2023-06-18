@@ -1,0 +1,49 @@
+$primary-color: #FF7A00;
+$hover-primary: #984900;
+$secondary-color: #18151C;
+$black-color: #000;
+$white-color: #fff;
+$fade-color: #8A2020;
+
+.main-section{
+    .wrapper{
+        .container{
+
+
+            .event-result{
+                width: 400px;
+                background-color: #F2F2F2;
+
+                svg{
+                    width: 100%;
+                    margin: 0;
+                }
+
+                .typo{
+                    h4{
+                        font-weight: 500;
+                    }
+
+                    .money{
+                        .upper{
+                            div{
+                                display: flex;
+                            }
+                        }
+
+                        .lower{
+                            display: flex;
+                        }
+                    }
+
+                    .info{
+                        .icon{
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
