@@ -1,0 +1,469 @@
+.main-container
+{
+    display: flex;
+}
+
+.wrapper
+{
+    max-width: 1200px;
+}
+
+.column
+{
+    flex: 1;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    /*padding-top: 120px !important;
+    display: grid;
+    align-items: center;*/
+}
+
+.column:last-child
+{
+    background-color: var(--secondary-color);
+    border-left: 15px solid var(--primary-color);
+}
+
+.content-container
+{
+    max-width: 650px;
+}
+
+/* -=-=-=-=-=-=-=-=-=-= Primeira Coluna -=-=-=-=-=-=-=-=-=-= */
+
+.column.first-column 
+{
+    display: flex;
+    justify-content: center;
+}
+
+.column.first-column
+{
+    h2 
+    {
+        font-size: 30px !important;
+        color: var(--primary-color);
+        font-weight: 400 !important;
+        font-family: inter !important;
+    }
+
+    .line 
+    {
+        height: 3px;
+        width: 120px;
+        background: var(--primary-color);
+        position: relative;
+        bottom: 5px;
+    }
+
+    .text
+    {
+        font-size: 18px;
+        margin: 25px 0 50px 0;
+    }
+
+    .input-content p 
+    {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .input-content 
+    {
+        margin: 22px 0px;
+    }
+
+    .input-box
+    {
+        position: relative;
+        right: 24px;
+        display: flex;
+        align-items: center;
+    }
+
+    input
+    {
+        width: 90%;
+        height: 45px;
+        border: none;
+        background: var(--light-gray-color);
+        border-radius: 4px;
+        padding-left: 50px;
+        font-size: 16px;
+        outline: none !important;
+        transition: 0.5s ease;
+    }
+
+    input:focus
+    {
+        border: 2px solid var(--primary-color);
+    }
+
+    i
+    {
+        position: relative; 
+        left: 35px; 
+        font-size: 24px; 
+        color: #C1C1C1;
+    }
+
+    button 
+    {
+        cursor: pointer;
+        background-image: linear-gradient(94.11deg, #8A2020 -130.02%, #BD4712 -63.99%, #FF7A00 113.79%);
+        height: 45px;
+        width: 96%;
+        border: none;
+        font-size: 16px;
+        color: white;
+        border-radius: 4px;
+        margin-top: 22px;
+        transition: background-image 0.3s;
+    }
+
+    .have-account 
+    {
+        margin-top: 22px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .have-account p, .have-account span
+    {
+        font-size: 15px;
+    }
+
+    .have-account span
+    {
+        cursor: pointer;
+        margin-left: 8px;
+        color: var(--primary-color);
+    }
+}
+
+
+/* -=-=-=-=-=-=-=-=-=-= Segunda Coluna -=-=-=-=-=-=-=-=-=-= */
+
+.column.second-column
+{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.column.second-column
+{
+    .content-container
+    {
+        float: right;
+    }
+
+    .logo
+    {
+        display: flex;
+        justify-content: center;
+    }
+
+    .text-container
+    {
+        float: right;
+        margin-top: 5em;
+
+        .reserved-rights
+        {
+            text-align: center;
+            margin-top: 120px;
+        }
+    }
+
+    .text-container .align-end
+    {
+        text-align: end;
+    }
+
+    .text-container h1
+    {
+        font-size: 76px;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .align-end
+    {
+        p
+        {
+            font-size: 16px;
+            margin-top: 50px;
+        }
+
+        img
+        {
+            margin-top: 35px;
+        }
+    }
+    
+    .align-left 
+    {
+        margin-top: 90px;
+
+        h3
+        {
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        .card-container 
+        {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card-box
+        {
+            max-width: 190px;
+            margin-top: 40px;
+
+            .title
+            {
+                text-transform: uppercase;
+                color: var(--primary-color);
+                margin-bottom: 10px;
+            }
+
+            .text
+            {
+                font-weight: 200;
+            }
+        }
+    }
+}
+
+/* -=-=-=-=-=-=-=-=-=-= Pop-Up Confirm E-mail -=-=-=-=-=-=-=-=-=-= */
+
+.center
+{
+    position: absolute;
+}
+
+
+.popup
+{
+    opacity: 0;
+    top: -200%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: opacity 300ms ease-in-out, top 1000ms ease-in-out, transform 1000ms ease-in-out;
+}
+
+.popup.active 
+{
+    opacity: 1;
+    top: 0;
+    z-index: 3;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 300ms cubic-bezier(0.18, 0.89, 0.43, 1.19);
+}
+
+.popup .overlay
+{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1;
+}
+
+.popup .content
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 4px;
+    width: 650px;
+    height: 300px;
+    z-index: 2;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.popup
+{
+    .title
+    {
+        margin: 25px 0 30px 0;
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    .description
+    {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    button
+    {
+        cursor: pointer;
+        width: 350px;
+        height: 45px;
+        border-radius: 4px;
+        border: 0px;
+        background-image: linear-gradient(94.11deg, #8A2020 -130.02%, #BD4712 -63.99%, #FF7A00 113.79%);
+        font-size: 16px;
+        color: white;
+        font-weight: 500;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    p
+    {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* -=-=-=-=-=-=-=-=-=-= Responsividade -=-=-=-=-=-=-=-=-=-= */
+
+@media (max-width: 1415px) 
+{
+    .content-container
+    {
+        padding: 3em;
+    }
+
+    .second-column
+    {
+        .text-container
+        {
+            .align-end h1
+            {
+                font-size: 70px;
+            }
+        }
+    }
+
+    .column.second-column .align-left .card-box
+    {
+        max-width: 170px;
+        margin-top: 40px;
+
+        .title
+        {
+            font-size: 12px;
+        }
+    }
+}
+
+@media (max-width: 1180px)
+{
+    .second-column
+    {
+        .text-container
+        {
+            .align-end h1
+            {
+                font-size: 60px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1150px)
+{
+    .text-container
+    {
+        .align-left
+        {
+            h3
+            {
+                display: none;
+            }
+
+            .card-container
+            {
+                display: none !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 1040px)
+{
+    .second-column
+    {
+        .text-container
+        {
+            .align-end h1
+            {
+                font-size: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 920px)
+{
+    .column.second-column
+    {
+        display: none;
+    }
+    
+    .popup .content
+    {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px)
+{   
+    .popup .content .title
+    {
+        font-size: 24px;
+    }
+
+    .popup .description, .popup p
+    {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px)
+{   
+    .popup .content
+    {
+        height: 330px;
+    }
+
+    .popup .content .title
+    {
+        font-size: 20px;
+    }
+
+    .popup .description, .popup p
+    {
+        font-size: 12px;
+        margin-bottom: 30px;
+    }
+
+    .popup button
+    {
+        width: 80%;
+    }
+}
+
+@media (max-width: 390px)
+{
+    .popup .content .title
+    {
+        font-size: 18px;
+    }
+}

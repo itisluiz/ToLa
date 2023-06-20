@@ -1,0 +1,383 @@
+.main-container
+{
+    display: flex;
+}
+
+.column
+{
+    flex: 1;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary-color);
+}
+
+.column:last-child
+{
+    background-color: white;
+    border-left: 15px solid var(--primary-color);
+}
+
+.content-container
+{
+    max-width: 650px;
+}
+
+/* -=-=-=-=-=-=-=-=-=-= Primeira Coluna -=-=-=-=-=-=-=-=-=-= */
+
+.column.first-column 
+{
+    display: flex;
+    justify-content: center;
+    color: white;
+
+    .logo
+    {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        bottom: 120px;
+    }
+
+    h1
+    {
+        font-size: 76px;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .subtitle
+    {
+        font-size: 16px;
+        margin-top: 50px;
+    }
+
+    img
+    {
+        margin-top: 35px;
+    }
+
+    .create-account
+    {
+        font-size: 16px;
+        margin-top: 35px;
+        font-weight: 200;
+    }
+
+    button
+    {
+        cursor: pointer;
+        width: 250px;
+        height: 45px;
+        background: transparent;
+        border: 2px solid var(--primary-color);
+        font-size: 16px;
+        color: white;
+        border-radius: 4px;
+        margin-top: 35px;
+        transition: 0.5s ease-in-out;
+    }
+
+    button:hover
+    {
+        background-color: var(--primary-color);
+    }
+
+    .reserved-rights 
+    {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+/* -=-=-=-=-=-=-=-=-=-= Segunda Coluna -=-=-=-=-=-=-=-=-=-= */
+
+.column.second-column
+{
+    display: flex;
+    justify-content: center;
+
+    h2 
+    {
+        font-size: 30px !important;
+        color: var(--primary-color);
+        font-weight: 400 !important;
+        font-family: inter !important;
+    }
+
+    .line 
+    {
+        height: 3px;
+        width: 120px;
+        background: var(--primary-color);
+        position: relative;
+        bottom: 5px;
+    }
+
+    .text
+    {
+        font-size: 18px;
+        margin: 25px 0 50px 0;
+    }
+
+        .input-content p 
+    {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .input-content 
+    {
+        margin: 22px 0px;
+    }
+
+    .input-box
+    {
+        position: relative;
+        right: 24px;
+        display: flex;
+        align-items: center;
+    }
+
+    input[type=text], input[type=password]
+    {
+        width: 90%;
+        height: 45px;
+        border: none;
+        background: var(--light-gray-color);
+        border-radius: 4px;
+        padding-left: 50px;
+        font-size: 16px;
+        outline: none !important;
+        transition: 0.5s ease;
+    }
+
+    input[type=text]:focus, input[type=password]:focus
+    {
+        border: 2px solid var(--primary-color);
+    }
+
+    i
+    {
+        position: relative; 
+        left: 35px; 
+        font-size: 24px; 
+        color: #C1C1C1;
+    }
+
+    .help-box 
+    {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 25px;
+    }
+
+    .remember-me 
+    {
+        display: flex;
+
+        input[type="checkbox"] 
+        {
+            width: 22px;
+            height: 22px;
+            accent-color: var(--primary-color);
+        }
+
+        p
+        {
+            font-size: 15px;
+            margin-left: 8px;
+        }
+    }
+
+    .forgot-password
+    {
+        cursor: pointer;
+        font-size: 15px;
+    }
+
+    button 
+    {
+        cursor: pointer;
+        background-image: linear-gradient(94.11deg, #8A2020 -130.02%, #BD4712 -63.99%, #FF7A00 113.79%);
+        height: 45px;
+        width: 96%;
+        border: none;
+        font-size: 16px;
+        color: white;
+        border-radius: 4px;
+        margin-top: 22px;
+        transition: background-image 0.3s;
+    }
+
+    .continue-with 
+    {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+
+        p
+        {
+            margin: 0;
+            font-size: 15px;
+        }
+
+        .line-black 
+        {
+            width: 70%;
+            height: 1px;
+            background: black;
+            margin-left: 10px;
+        }
+    }
+
+    .social-media-container
+    {
+        margin-top: 35px;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 25px;
+
+        .social-box 
+        {
+            cursor: pointer;
+            width: 180px;
+            height: 50px;
+            background: var(--light-gray-color);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        img 
+        {
+            width: 30px;
+        }
+
+        p
+        {
+            margin: 0 0 0 10px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+    }
+
+}
+
+/* -=-=-=-=-=-=-=-=-=-= Responsividade -=-=-=-=-=-=-=-=-=-= */
+
+@media (max-width: 1415px) 
+{
+    .content-container
+    {
+        padding: 3em;
+    }
+
+    .column.first-column h1 
+    {
+        font-size: 70px;
+    }
+
+}
+
+@media (max-width: 1340px)
+{
+    .social-media-container
+    {
+        justify-content: space-evenly !important;
+
+        .social-box
+        {
+            width: auto !important;
+            padding: 0 20px;
+
+            p
+            {
+                display: none !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px)
+{
+    .line-black
+    {
+        width: 60% !important;
+    }
+}
+
+@media (max-width: 900px)
+{
+    .column.first-column h1 
+    {
+        font-size: 60px;
+    }
+
+    .line-black
+    {
+        width: 50% !important;
+    }
+}
+
+@media (max-width: 850px)
+{
+    .main-container 
+    {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .column.first-column .logo 
+    {
+        bottom: 50px;
+    }
+}
+
+@media (max-width: 450px)
+{
+    .column.second-column 
+    {
+        .remember-me
+        {
+            p
+            {
+                font-size: 13px;
+            }
+        }
+
+        .forgot-password
+        {
+            p
+            {
+                font-size: 13px;
+            }
+        }
+
+    }
+
+}
+
+@media (max-width: 400px)
+{
+    .column.first-column h1 
+    {
+        font-size: 50px;
+    }
+
+    .column.second-column
+    {
+        h2
+        {
+            font-size: 25px !important;
+        }
+
+        .help-box
+        {
+            flex-direction: column;
+            margin-right: 0px !important;
+        }
+    }
+
+}

@@ -10,6 +10,20 @@ $black-color: #000;
 $white-color: #fff;
 $fade-color: #8A2020;
 
+:root
+{
+    
+    --primary-color: #FF7A00;
+    --secondary-color: #18151C;
+    --black-color: #000;
+    --white-color: #fff;
+    --fade-color: #8A2020;
+    --gray-color: #8A8A8A;
+    --dark-gray: #545159;
+    --light-gray-color: #EAEAEA;
+
+}
+
 *{
     margin: 0;
     padding: 0;
