@@ -5,6 +5,10 @@ $black-color: #000;
 $white-color: #fff;
 $fade-color: #8A2020;
 
+ng-content{
+  width: 100%;
+}
+
 .mat-drawer-backdrop.mat-drawer-shown {
   background-color: rgba(0, 0, 0, 0.1);
 }
@@ -19,9 +23,10 @@ $fade-color: #8A2020;
         right: 0;
         left: 0;
         margin: 0 auto;
-        z-index: 999;
-        height: 100%;
+        z-index: 1;
+        max-height: 70px;
         transform: translateY(20px);
+        width: fit-content;
         img{
             display: flex;
             margin: 0 auto;
@@ -120,7 +125,6 @@ $fade-color: #8A2020;
     .bar-detail{
         background-color: $primary-color;
         height: 6px;
-        width: 100%;
         position: absolute;
         box-shadow: 0 0 0 100vmax $primary-color;
         clip-path: inset(0 -100vmax);
@@ -174,11 +178,13 @@ $fade-color: #8A2020;
     display: flex;
     flex-direction: row;
     align-items: center;
+    z-index: 9;
 
     li{
       list-style: none;
       margin-right: 2.5em;
       cursor: pointer;
+      z-index: 9;
 
       &:nth-of-type(2){
         margin-right: 0;
@@ -191,17 +197,20 @@ $fade-color: #8A2020;
     ul{
         display: flex;
         align-items: center;
+        z-index: 9;
         i{
             cursor: pointer;
             color: #fff;
             font-size: 23px;
             margin-right: 1em;
+            z-index: 9;
         }
 
         .user-pic{
             display: flex;
             align-items: center;
             position: relative;
+            z-index: 9;
 
             .circle{
                 background-color: $primary-color;
