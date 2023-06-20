@@ -6,39 +6,101 @@ $white-color: #fff;
 $fade-color: #8A2020;
 
 .main-section{
+
     .wrapper{
+        max-width: 1235px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
         .container{
 
+            h2{
+                margin-inline: 1em;
+                font-size: clamp(24px, 3vw, 32px);
+                margin-top: 2em;
+                transform: translateX(-8px);
+            }
 
             .event-result{
                 width: 400px;
                 background-color: #F2F2F2;
+                margin: 1em auto;
+                display: none;
 
                 svg{
                     width: 100%;
                     margin: 0;
+                    max-height: 265px;
+                    object-fit: cover;
+                    transform: translateY(-24px);
                 }
 
                 .typo{
+                    margin-inline: 1.5em;
+                    padding-bottom: 2em;
                     h4{
                         font-weight: 500;
+                        font-size: 1.4em;
                     }
 
                     .money{
                         .upper{
+                            margin-top: 1em;
                             div{
                                 display: flex;
+                                justify-content: space-between;
+
+                                .valor{
+                                    color: #797979;
+                                    font-size: 1.1em;
+                                    font-weight: 300;
+                                }
+
+                                .taxa{
+                                    color: #797979;
+                                    font-size: 1.1em;
+                                    font-weight: 300;
+                                }
                             }
                         }
 
                         .lower{
                             display: flex;
+                            justify-content: space-between;
+                            margin-top: 1em;
+
+                            .total{
+                                font-size: 1.1em;
+                                font-weight: 500;
+
+                            }
                         }
                     }
 
                     .info{
+   
                         .icon{
                             display: flex;
+                            align-items: center;
+                            margin-bottom: 1em;
+                            margin-top: 2em;
+
+                            p{
+                                margin: 0;
+                                font-size: 1.1em;
+                                font-weight: 500;
+                            }
+
+                            svg{
+                                transform: translateY(0);
+                                width: fit-content;
+                                margin-right: .7em;
+                            }
+                        }
+
+                        .desc{
+                            color: #4A4A4A;
+                            width: 70%;
                         }
                     }
                 }
@@ -47,3 +109,20 @@ $fade-color: #8A2020;
     }
 }
 
+@media only screen and (min-width: 1100px){
+    .main-section{
+        .wrapper{
+            .container{
+                .content{
+                    display: flex;
+
+                    .event-result{
+                        display: flex;
+                        flex-direction: column;
+                        transform: translateY(-30px);
+                    }
+                }
+            }
+        }
+    }
+}

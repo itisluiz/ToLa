@@ -284,3 +284,9 @@ $fade-color: #8A2020;
         }
     }
 }
+
+@media only screen and (min-width: 1100px) {
+    .container-tabs{
+        max-width: 700px;
+    }
+}
