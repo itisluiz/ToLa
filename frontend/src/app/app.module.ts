@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatTableModule } from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -25,7 +27,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PaymentTabsComponent } from './components/payment-tabs/payment-tabs.component';
-
+import { EventsHomeComponent } from './components/events-home/events-home.component';
+import { SignupPageComponent } from './components/signup-page/signup-page.component';
+import { SigninPageComponent } from './components/signin-page/signin-page.component';
+import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
+import { MyInfosComponent } from './components/my-infos/my-infos.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +45,12 @@ import { PaymentTabsComponent } from './components/payment-tabs/payment-tabs.com
     ArtistComponent,
     CardUserFeedbackComponent,
     PaymentPageComponent,
-    PaymentTabsComponent
+    PaymentTabsComponent,
+    EventsHomeComponent,
+    SignupPageComponent,
+    SigninPageComponent,
+    EditProfileComponent,
+    MyInfosComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +66,10 @@ import { PaymentTabsComponent } from './components/payment-tabs/payment-tabs.com
     MatStepperModule,
     MatInputModule,
     MatFormFieldModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatTabsModule,
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
