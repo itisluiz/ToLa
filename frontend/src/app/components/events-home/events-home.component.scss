@@ -1,6 +1,6 @@
 .wrapper
 {
-    padding: 1em;
+  padding: 2em;
 }
 
 .location {
@@ -137,6 +137,12 @@ img.ticket-button::after
     
 }
 
+.event-card img 
+{
+  max-width: 220px;
+  max-height: 120px;
+}
+
 /* -=-=-=-=-=-=-=-=-=-= Eventos em Alta -=-=-=-=-=-=-=-=-=-= */
 
 .second-section {
@@ -164,6 +170,11 @@ img.ticket-button::after
   margin-top: 20px;
 }
 
+.events-container a 
+{
+  text-decoration: none;
+}
+
 .events-container .event-card:first-child {
   margin-left: 0px;
 }
@@ -186,10 +197,12 @@ img.ticket-button::after
 .event-card .event-name {
   text-align: center;
   font-weight: 600;
+  color: black;
 }
 
 .event-card .local {
   text-align: center;
+  color: black;
 }
 
 /* -=-=-=-=-=-=-=-=-=-= Achamos que você vai gostar -=-=-=-=-=-=-=-=-=-= */
@@ -200,6 +213,7 @@ img.ticket-button::after
 
 .third-section {
   margin-top: 50px;
+  margin-bottom: 10em;
 }
 
 .suggestion-box {
@@ -209,6 +223,11 @@ img.ticket-button::after
 .suggestion-card-container {
   display: flex;
   overflow-x: auto;
+}
+
+.suggestion-card-container a
+{
+  text-decoration: none;
 }
 
 .suggestion-card-container::-webkit-scrollbar {
@@ -221,40 +240,109 @@ img.ticket-button::after
 
 /* -=-=-=-=-=-=-=-=-=-= RESPONSIVIDADE -=-=-=-=-=-=-=-=-=-= */
 
-@media (min-width: 650px) {
-  .wrapper {
-    padding: 2em;
+@media (min-width: 500px)
+{
+  .wrapper
+  {
+    padding: 4em;
   }
+}
 
-  .sugestion-container {
+@media (min-width: 650px) {
+
+  .sugestion-container 
+  {
     display: flex;
     align-items: center;
   }
 
-  .sugestion-container .image {
+  .sugestion-container .image 
+  {
     margin-right: 30px;
   }
 
-  .title {
+  .title 
+  {
     font-size: 20px !important;
   }
 
-  .subtitle {
+  .subtitle 
+  {
     font-size: 18px;
   }
 }
 
-@media (min-width: 800px) {
-  /*
-    .suggestion-box
-    {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-    
-    .suggestion-card-container
-    {
-        display: block;
-    }*/
+@media (min-width: 900px) 
+{
+  .suggestion-box
+  {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .event-category
+  {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .suggestion-card-container
+  {
+    flex-direction: column;
+  }
+
+  .suggestion-box .event-card
+  {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1290px)
+{
+  .suggestion-card-container .event-card 
+  { 
+    display: flex;
+    margin: 15px 0px !important; 
+  }
+
+  .suggestion-card-container img 
+  { 
+    max-width: 170px !important;
+    max-height: 90px !important; 
+  }
+
+  .event-card .date 
+  {
+    font-size: 14px;
+  }
+
+  .event-text 
+  {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  .event-card
+  {
+    margin: 0 !important;
+  }
+
+  .events-container 
+  {
+    justify-content: space-between;
+  }
+
+}
+
+@media (min-width: 1320px) 
+{
+  .wrapper
+  {
+    max-width: 1200px;
+    margin: 5em auto;
+    padding: 0 !important;
+  }
 }
