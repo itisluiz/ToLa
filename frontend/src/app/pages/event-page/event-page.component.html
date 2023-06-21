@@ -59,16 +59,11 @@
             </div>
 
             <div class="artist-container">
-                <app-artist></app-artist>
-                <app-artist></app-artist>
-                <app-artist></app-artist>
-                <app-artist></app-artist>
-                <app-artist></app-artist>
-                <app-artist></app-artist>
-                <app-artist></app-artist>
-                <app-artist></app-artist>
-                <app-artist></app-artist>
-                <app-artist></app-artist>
+                <app-artist *ngFor="let person of artist" class="artist">
+                    <img class="img" [src]="person.photo">
+                    <p class="person-name">{{ person.name }}</p>
+                </app-artist>
+                
             </div>
 
             <div class="observation">
@@ -90,7 +85,6 @@
             <p>Esta nota do evento foi calculada com base em avaliações de pessoas que compareceram ao evento e deixaram sua opinião.</p>
             <hr>
     
-            <app-card-user-feedback></app-card-user-feedback>
             <app-card-user-feedback></app-card-user-feedback>
         </div>
 
