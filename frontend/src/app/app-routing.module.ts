@@ -12,7 +12,6 @@ import { MyInfosComponent } from './components/my-infos/my-infos.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
-  {path: 'main', component: MainNavComponent},
   {path: 'event', component: EventPageComponent},
   {path: 'payment', component: PaymentPageComponent},
   {path: 'events-home', component: EventsHomeComponent},
