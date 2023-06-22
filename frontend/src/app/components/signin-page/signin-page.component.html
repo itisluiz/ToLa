@@ -15,7 +15,7 @@
             <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <img src="../../../assets/Arrow-right.svg" alt="">
             <p class="create-account">Não possui uma conta?</p>
-            <button routerLink="signup">Criar Conta</button>
+            <a routerLink="../signup"><button>Criar Conta</button></a>
 
         </div>
 
@@ -26,11 +26,11 @@
         <div class="content-container">
 
             <div class="title">
-                <h2>Realize seu cadastro</h2>
+                <h2>Realize seu Login</h2>
                 <div class="line"></div>
             </div>
 
-            <p class="text">Ao preencher suas informações abaixo você poderá criar uma conta em nosso site</p>
+            <p class="text">Ao preencher suas informações abaixo você poderá acessar sua conta em nosso site</p>
 
             <form action="">
 
@@ -55,7 +55,7 @@
                     <div class="forgot-password"><p>Esqueceu sua senha?</p></div>
                 </div>
 
-                <button routerLink="signup" (click)="$event.preventDefault()">Criar Conta</button>
+                <a routerLink="../events-home"><button routerLink="signup" (click)="$event.preventDefault()">Realizar Login</button></a>
 
             </form>
 
