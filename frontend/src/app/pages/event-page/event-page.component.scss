@@ -125,19 +125,19 @@ p{
                         left: 0;
                         content: 'COMPRAR INGRESSO';
                         font-weight: 500;
-                        font-size: 1.2em;
+                        font-size: 1em;
                         color: #fff;
                         margin-left: 48px;
-                        transform: translateY(20px);
+                        transform: translateY(24px);
                     }
                 }
 
                 .grey-ticket-container{
                     position: relative;
-                    transform: translateX(-18px);
+                    margin-left: -1em;
 
                     img{
-                        transform: scaleX(0.85);
+                        transform: scaleX(0.8);
                     }
 
                     &::after{
@@ -146,10 +146,10 @@ p{
                         left: 0;
                         content: 'AVALIAR EVENTO';
                         font-weight: 500;
-                        font-size: 1.2em;
+                        font-size: 1em;
                         color: #fff;
                         margin-left: 60px;
-                        transform: translateY(20px);
+                        transform: translateY(24px);
                     }
                 }
             }
